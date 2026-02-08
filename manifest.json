@@ -1,0 +1,53 @@
+{
+  "manifest_version": 3,
+  "name": "Real-Time Deepfake Detector",
+  "version": "1.1",
+  "description": "Detects deepfakes in videos by analyzing lip-sync in real-time on meeting platforms.",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://meet.google.com/*",
+        "*://*.zoom.us/j/*",
+        "*://*.zoom.us/wc/*",
+        "*://*.teams.microsoft.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["injected_style.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "sync_engine.js",
+        "icons/icon48.png"
+      ],
+      "matches": [
+        "*://meet.google.com/*",
+        "*://*.zoom.us/*",
+        "*://*.teams.microsoft.com/*"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
+
+
