@@ -44,6 +44,8 @@ SyncCheck is an AI-powered browser-based system designed to detect **deepfake or
 - OpenCV
 - NumPy
 - FFmpeg
+<img width="1487" height="808" alt="image" src="https://github.com/user-attachments/assets/fe0828cb-a9c6-4ec5-828f-37203fdc490b" />
+<img width="1499" height="749" alt="image" src="https://github.com/user-attachments/assets/7e47c283-749a-4381-85be-811042bff915" />
 
 ---
 
